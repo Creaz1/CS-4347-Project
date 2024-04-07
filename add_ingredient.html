@@ -1,1 +1,42 @@
+<html>
 
+
+<form style="display: flex;
+flex-direction: column;
+gap: 1rem; 
+justify-content: center;
+align-items: start;">
+    <h1>Add an ingredient</h1>
+
+    <div style="display: flex;flex-direction: row;gap: 1rem; justify-content: start;align-items: center;">
+        <label for="ingredient_name">Ingredient Name</label>
+        <input type="text" id="ingredient_name" placeholder="Ingredient Name">
+    </div>
+
+    <div style="display: flex;flex-direction: row;gap: 1rem;justify-content: start;align-items: center;">
+        <label for="ingredient_category">Ingredient Type</label>
+        <input type="text" id="ingredient_type" placeholder="Ingredient Type">
+    </div>
+
+    <div style="display: flex;flex-direction: row;gap: 1rem; justify-content: start;align-items: center;">
+        <label for="ingredient_price">Quantity on hand</label>
+        <input type="text" id="ingredient_quantity" placeholder="Ingredient Quantity">
+    </div>
+
+    <div style="display: flex;flex-direction: row;gap: 1rem; justify-content: start;align-items: center;">
+        <label for="ingredient_cooking_time">Ingredient Cooking Time</label>
+        <input type="text" id="ingredient_cooking_time" placeholder="Ingredient Cooking Time">
+    </div>
+
+    <button type="submit">Add Ingredient</button>
+</form>
+
+<script>
+    document.getElementById('ingredient_price').addEventListener('input', function () {
+        document.getElementById('ingredient_price_value').innerText = "$" + this.value;
+    });
+    document.getElementById('ingredient_price').value = 10.00;
+    document.getElementById('ingredient_price_value').innerText = "$" + document.getElementById('ingredient_price').value;
+</script>
+
+</html>
