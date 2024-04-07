@@ -1,1 +1,29 @@
 
+<html>
+    <!--use select and option-->
+    <form style="display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;">
+        <h1>Assign a chef to a dish</h1>
+
+        <label for="dish_id">Dish ID</label>
+        <select name="dish_id" id="dish_id">
+            <option value="dish1">Dish 1</option>
+            <option value="dish2">Dish 2</option>
+            <option value="dish3">Dish 3</option>
+            <option value="dish4">Dish 4</option>
+        </select>
+
+        <label for="chef_id">Chef ID</label>
+        <select name="chef_id" id="chef_id">
+            <option value="chef1">Chef 1</option>
+            <option value="chef2">Chef 2</option>
+            <option value="chef3">Chef 3</option>
+            <option value="chef4">Chef 4</option>
+        </select>
+
+        <button type="submit">Assign Chef</button>
+    </form>
+</html>

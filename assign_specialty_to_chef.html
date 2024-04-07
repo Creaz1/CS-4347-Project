@@ -1,1 +1,29 @@
 
+<html>
+    <!--use select and option for specialty name and chef id-->
+    <form style="display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;">
+        <h1>Assign a specialty to a chef</h1>
+
+        <label for="specialty_name">Specialty Name</label>
+        <select name="specialty_name" id="specialty_name">
+            <option value="specialty1">Specialty 1</option>
+            <option value="specialty2">Specialty 2</option>
+            <option value="specialty3">Specialty 3</option>
+            <option value="specialty4">Specialty 4</option>
+        </select>
+
+        <label for="chef_id">Chef ID</label>
+        <select name="chef_id" id="chef_id">
+            <option value="chef1">Chef 1</option>
+            <option value="chef2">Chef 2</option>
+            <option value="chef3">Chef 3</option>
+            <option value="chef4">Chef 4</option>
+        </select>
+
+        <button type="submit">Assign Specialty</button>
+    </form>
+</html>

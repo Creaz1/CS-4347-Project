@@ -1,1 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update Supplier</title>
+</head>
+<body>
+    <h1>Update Supplier</h1>
+    <form action="update_supplier.php" method="post">
+        <label for="supplier">Select Supplier:</label>
+        <select id="supplier" name="supplier_id" required>
+            <!-- Dynamically populate with suppliers -->
+        </select><br><br>
+        
+        <label for="name">New Name:</label>
+        <input type="text" id="name" name="name"><br><br>
+        
+        <label for="email">New Email:</label>
+        <input type="email" id="email" name="email"><br><br>
+        
+        <label for="phoneNumber">New Phone Number:</label>
+        <input type="text" id="phoneNumber" name="phoneNumber"><br><br>
+        
+        <input type="submit" value="Update Supplier">
+    </form>
+</body>
+</html>
 

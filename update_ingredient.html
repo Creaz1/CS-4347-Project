@@ -1,1 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update Ingredient</title>
+</head>
+<body>
+    <h1>Update Ingredient</h1>
+    <form action="update_ingredient.php" method="post">
+        <label for="ingredient">Select Ingredient:</label>
+        <select id="ingredient" name="ingredient_id" required>
+            <!-- Options should be populated dynamically with ingredient names and IDs -->
+            <option value="1">Ingredient 1</option>
+            <option value="2">Ingredient 2</option>
+            <!-- More ingredients -->
+        </select><br><br>
+        
+        <label for="name">New Name:</label>
+        <input type="text" id="name" name="name"><br><br>
+        
+        <label for="type">New Type:</label>
+        <input type="text" id="type" name="type"><br><br>
+        
+        <label for="quantity">New Quantity on Hand:</label>
+        <input type="number" id="quantity" name="quantity" step="any"><br><br>
+        
+        <label for="unit">New Unit of Measurement:</label>
+        <select id="unit" name="unit">
+            <option value="grams">Grams</option>
+            <option value="liters">Liters</option>
+            <option value="pieces">Pieces</option>
+            <!-- Add more units as needed -->
+        </select><br><br>
+        
+        <label for="supplier_id">Supplier ID:</label>
+        <input type="number" id="supplier_id" name="supplier_id"><br><br>
+        
+        <input type="submit" value="Update Ingredient">
+    </form>
+</body>
+</html>
 

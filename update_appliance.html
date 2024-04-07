@@ -1,1 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update Appliance</title>
+</head>
+<body>
+    <h1>Update Appliance</h1>
+    <form action="update_appliance.php" method="post">
+        <label for="appliance">Select Appliance:</label>
+        <select id="appliance" name="appliance_id" required>
+        </select><br><br>
+        
+        <label for="name">New Name:</label>
+        <input type="text" id="name" name="name"><br><br>
+        
+        <label for="status">New Status:</label>
+        <select id="status" name="status" required>
+            <option value="Available">Available</option>
+            <option value="In Use">In Use</option>
+            <option value="Needs Maintenance">Needs Maintenance</option>
+            <!-- Add more status options as needed -->
+        </select><br><br>
+        
+        <input type="submit" value="Update Appliance">
+    </form>
+</body>
+</html>
 

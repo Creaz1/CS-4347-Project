@@ -1,1 +1,29 @@
 
+<html>
+    <!--use select and option for ingredient id and dish id-->
+    <form style="display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;">
+        <h1>Assign an ingredient to a dish</h1>
+
+        <label for="ingredient_id">Ingredient ID</label>
+        <select name="ingredient_id" id="ingredient_id">
+            <option value="ingredient1">Ingredient 1</option>
+            <option value="ingredient2">Ingredient 2</option>
+            <option value="ingredient3">Ingredient 3</option>
+            <option value="ingredient4">Ingredient 4</option>
+        </select>
+
+        <label for="dish_id">Dish ID</label>
+        <select name="dish_id" id="dish_id">
+            <option value="dish1">Dish 1</option>
+            <option value="dish2">Dish 2</option>
+            <option value="dish3">Dish 3</option>
+            <option value="dish4">Dish 4</option>
+        </select>
+
+        <button type="submit">Assign Ingredient</button>
+    </form>
+</html>
