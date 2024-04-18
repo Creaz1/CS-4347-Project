@@ -78,6 +78,5 @@ CREATE TABLE diet_restrictions (
 CREATE TABLE specialties (
     chef_id INT,
     specialty VARCHAR(255),
-    FOREIGN KEY (ingredient_id) references ingredient(id),
     PRIMARY KEY (chef_id, specialty)
 );

@@ -9,9 +9,22 @@
             "server": "localhost",
             "port": 3306,
             "driver": "MySQL",
-            "name": "DatabaseProject",
-            "database": "DatabaseProject",
-            "username": "username"
+            "name": "Test",
+            "database": "Test",
+            "username": "root"
+        },
+        {
+            "mysqlOptions": {
+                "authProtocol": "default",
+                "enableSsl": "Disabled"
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 3306,
+            "driver": "MySQL",
+            "name": "Test",
+            "database": "test",
+            "username": "root"
         }
     ]
 }
