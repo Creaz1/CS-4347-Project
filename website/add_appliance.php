@@ -16,15 +16,27 @@ if ($conn->connect_error) {
 // Check if form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Prepare data for insertion
+
+    // echo all $_POST variables
+    foreach ($_POST as $key => $value) {
+        echo $key . " = " . $value . "<br>";
+    }
+
     $appliance_name = $_POST['appliance_name'];
     $appliance_status = $_POST['appliance_status'];
+    // $id = $_POST['appliance_id'];
+
+    // get count of rows in the table
+    $sql = "SELECT COUNT(*) FROM appliance";
+    $id = $conn->query($sql);
+
 
     // Prepare SQL statement
-    $sql = "INSERT INTO appliance (name, status) VALUES (?, ?)";
+    $sql = "INSERT INTO appliance (id, name, status) VALUES (?, ?, ?)";
 
     // Prepare and bind parameters
     $stmt = $conn->prepare($sql);
-    $stmt->bind_param("ss", $appliance_name, $appliance_status);
+    $stmt->bind_param("dss", $id, $appliance_name, $appliance_status);
 
     // Execute the statement
     if ($stmt->execute()) {

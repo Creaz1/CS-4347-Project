@@ -7,14 +7,16 @@ justify-content: center;
 align-items: center;" action="add_appliance.php" method="post">
     <h1>Add a new appliance</h1>
 
+    <!-- <input type="text" value=10 id="appliance_id" name="appliance_id" required> -->
+
     <div>
         <label for="appliance_name">Appliance Name</label>
-        <input type="text" id="appliance_name" placeholder="Appliance Name" required>
+        <input type="text" id="appliance_name" name="appliance_name" placeholder="Appliance Name" required>
     </div>
 
     <div>
         <label for="appliance_status">Appliance Status</label>
-        <input type="text" id="appliance_status" placeholder="Appliance Status" required>
+        <input type="text" id="appliance_status" name="appliance_status" placeholder="Appliance Status" required>
     </div>
 
     <button type="submit">Add Appliance</button>
