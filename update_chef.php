@@ -15,13 +15,16 @@ if ($conn->connect_error) {
 
 // Check if form is submitted for chef update
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $id = $_POST['id'];
+    $id = $_POST['chef_id'];
     $name = $_POST['name'];
+    $email = $_POST['email'];
+    $phone = $_POST['phone_number'];
+
     // Additional fields as necessary
 
     // Prepare and bind
-    $stmt = $conn->prepare("UPDATE chef SET name=? WHERE id=?");
-    $stmt->bind_param("si", $name, $id);
+    $stmt = $conn->prepare("UPDATE chef SET name=?, email=?, phone=? WHERE id=?");
+    $stmt->bind_param("sssi", $name, $email, $phone, $id);
 
     // Execute
     if ($stmt->execute()) {
