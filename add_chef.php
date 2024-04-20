@@ -21,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Additional fields as necessary
 
     // Prepare and bind
-    $stmt = $conn->prepare("INSERT INTO chef (name, email, phone) VALUES (?, ?, ?)");
+    $stmt = $conn->prepare("INSERT INTO chef (name, email, phoneNumber) VALUES (?, ?, ?)");
     $stmt->bind_param("sss", $name, $email, $phone);
 
     // Execute

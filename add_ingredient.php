@@ -23,8 +23,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Additional fields as necessary
 
     // Prepare and bind
-    $stmt = $conn->prepare("INSERT INTO ingredient (name, type, quantity, unit_of_measurement, supplier_id) VALUES (?, ?, ?, ?, ?)");
-    $stmt->bind_param("ssdis", $name, $type, $quantity, $unit_of_measurement, $supplier_id);
+    $stmt = $conn->prepare("INSERT INTO ingredient (name, type, quantity, unit, supplierID) VALUES (?, ?, ?, ?, ?)");
+    $stmt->bind_param("ssdss", $name, $type, $quantity, $unit_of_measurement, $supplier_id);
 
     // Execute
     if ($stmt->execute()) {

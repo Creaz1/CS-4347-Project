@@ -22,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Additional fields as necessary
 
     // Prepare and bind
-    $stmt = $conn->prepare("INSERT INTO dish (name, category, price, cooking_time) VALUES (?, ?, ?, ?)");
+    $stmt = $conn->prepare("INSERT INTO dish (name, category, price, cookingTime) VALUES (?, ?, ?, ?)");
     $stmt->bind_param("ssds", $name, $category, $price, $cooking_time);
 
     // Execute
