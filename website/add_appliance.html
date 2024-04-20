@@ -22,4 +22,35 @@ align-items: center;" action="add_appliance.php" method="post">
     <button type="submit">Add Appliance</button>
 </form>
 
+<div id="messages" style="display: flex;
+flex-direction: column;
+gap: 1rem;
+justify-content: center;
+align-items: center;">
+    <div id="error" style="display: none; background-color: rgba(255, 0, 0, 0.26); border-radius: 10px; padding: 0 1rem;">
+        <p>
+            Error adding appliance!
+        </p>
+    </div>
+    <div id="success" style="display: none; background-color: rgba(31, 255, 1, 0.24); border-radius: 10px; padding: 0 1rem">
+        <p>
+            Appliance added successfully!
+        </p>
+    </div>
+</div>
+
+<script>
+    // get hash from url
+    const hash = window.location.hash;
+    // if hash is #error, show error message
+    if (hash === "#error") {
+        document.getElementById("error").style.display = "block";
+    }
+    // if hash is #success, show success message
+    if (hash === "#success") {
+        document.getElementById("success").style.display = "block";
+    }
+
+</script>
+
 </html>

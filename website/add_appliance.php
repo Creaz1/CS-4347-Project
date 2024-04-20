@@ -28,8 +28,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // get count of rows in the table
     $sql = "SELECT COUNT(*) FROM appliance";
-    $id = $conn->query($sql);
-
+    $result = $conn->query($sql);
+    $row = $result->fetch_assoc();
+    $id = $row['COUNT(*)'] + 1;
 
     // Prepare SQL statement
     $sql = "INSERT INTO appliance (id, name, status) VALUES (?, ?, ?)";
@@ -41,12 +42,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Execute the statement
     if ($stmt->execute()) {
         echo "New record created successfully";
+        header('Location: ' . $_SERVER['HTTP_REFERER'] . "#success");
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
+        header('Location: ' . $_SERVER['HTTP_REFERER'] . "#error");
     }
 
     // Close statement and connection
     $stmt->close();
     $conn->close();
 }
+else {
+    echo "Form is not submitted";
+    header('Location: ' . $_SERVER['HTTP_REFERER'] . "#error");
+}
+
 ?>
