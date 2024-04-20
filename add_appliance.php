@@ -16,13 +16,21 @@ if ($conn->connect_error) {
 // Check if form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    // Prepare data for insertion
-    $appliance_name = $_POST['appliance_name'];
-    $appliance_status = $_POST['appliance_status'];
+    // Validate and sanitize input
+    $appliance_name = trim($_POST['appliance_name']);
+    $appliance_status = trim($_POST['appliance_status']);
 
     // Check if data is retrieved from the form
     if (empty($appliance_name) || empty($appliance_status)) {
         die("Error: Appliance name or status is empty.");
+    }
+
+    // Validate input format
+    if (!preg_match("/^[a-zA-Z0-9 ]*$/", $appliance_name)) {
+        die("Error: Appliance name contains invalid characters.");
+    }
+    if (!in_array($appliance_status, array('Functional', 'Non-Functional'))) {
+        die("Error: Appliance status is invalid.");
     }
 
     // Prepare SQL statement
