@@ -13,18 +13,17 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-// Check if form is submitted for chef addition
+// Check if form is submitted for dish deletion
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $name = $_POST['name'];
-    // Additional fields as necessary
+    $id = $_POST['id'];
 
     // Prepare and bind
-    $stmt = $conn->prepare("INSERT INTO chef (name) VALUES (?)");
-    $stmt->bind_param("s", $name);
+    $stmt = $conn->prepare("DELETE FROM dish WHERE id=?");
+    $stmt->bind_param("i", $id);
 
     // Execute
     if ($stmt->execute()) {
-        echo "New chef added successfully";
+        echo "dish deleted successfully";
     } else {
         echo "Error: " . $stmt->error;
     }

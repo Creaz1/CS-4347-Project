@@ -13,18 +13,19 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-// Check if form is submitted for chef addition
+// Check if form is submitted for ingredient update
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $id = $_POST['id'];
     $name = $_POST['name'];
     // Additional fields as necessary
 
     // Prepare and bind
-    $stmt = $conn->prepare("INSERT INTO chef (name) VALUES (?)");
-    $stmt->bind_param("s", $name);
+    $stmt = $conn->prepare("UPDATE ingredient SET name=? WHERE id=?");
+    $stmt->bind_param("si", $name, $id);
 
     // Execute
     if ($stmt->execute()) {
-        echo "New chef added successfully";
+        echo "ingredient updated successfully";
     } else {
         echo "Error: " . $stmt->error;
     }
