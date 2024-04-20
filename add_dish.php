@@ -15,12 +15,15 @@ if ($conn->connect_error) {
 
 // Check if form is submitted for dish addition
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $name = $_POST['name'];
+    $name = $_POST['dish_name'];
+    $category = $_POST['dish_category'];
+    $price = $_POST['dish_price'];
+    $cooking_time = $_POST['dish_cooking_time'];
     // Additional fields as necessary
 
     // Prepare and bind
-    $stmt = $conn->prepare("INSERT INTO dish (name) VALUES (?)");
-    $stmt->bind_param("s", $name);
+    $stmt = $conn->prepare("INSERT INTO dish (name, category, price, cooking_time) VALUES (?, ?, ?, ?)");
+    $stmt->bind_param("ssds", $name, $category, $price, $cooking_time);
 
     // Execute
     if ($stmt->execute()) {
