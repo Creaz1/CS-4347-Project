@@ -18,7 +18,26 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = $_POST['chef_name'];
     $email = $_POST['chef_email'];
     $phone = $_POST['chef_phone_number'];
-    // Additional fields as necessary
+
+    // Validate and sanitize input
+    $name = trim($name);
+    $email = trim($email);
+    $phone = trim($phone);
+
+    // Check if data is retrieved from the form
+    if (empty($name) || empty($email) || empty($phone)) {
+        die("Error: Name, email, or phone number is empty.");
+    }
+
+    // Validate email format
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        die("Error: Invalid email format.");
+    }
+
+    // Validate phone number format (Example format: XXX-XXX-XXXX)
+    if (!preg_match("/^\d{3}-\d{3}-\d{4}$/", $phone)) {
+        die("Error: Invalid phone number format. Please use XXX-XXX-XXXX format.");
+    }
 
     // Prepare and bind
     $stmt = $conn->prepare("INSERT INTO chef (name, email, phoneNumber) VALUES (?, ?, ?)");
