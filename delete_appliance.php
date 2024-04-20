@@ -23,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Execute
     if ($stmt->execute()) {
-        echo "Appliance deleted successfully";
+        echo "appliance deleted successfully";
     } else {
         echo "Error: " . $stmt->error;
     }
