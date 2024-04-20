@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="index.css">
 </head>
 
-<body style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
+<body style="display: flex; justify-content: center; align-items: center; flex-direction: column; gap: 1rem;">
     <h1>Restaurant Database</h1>
     <!-- <a href="add_appliance.html">Add Appliance</a>
         <a href="add_chef.html">Add Chef</a>
@@ -38,14 +38,24 @@
         <button onclick="window.location.href='add_chef.html'">Add Chef</button>
         <button onclick="window.location.href='add_dish.html'">Add Dish</button>
         <button onclick="window.location.href='add_ingredient.html'">Add Ingredient</button>
-        <button onclick="window.location.href='delete_appliance.html'">Delete Appliance</button>
-        <button onclick="window.location.href='delete_chef.html'">Delete Chef</button>
-        <button onclick="window.location.href='delete_dish.html'">Delete Dish</button>
-        <button onclick="window.location.href='delete_ingredient.html'">Delete Ingredient</button>
-        <button onclick="window.location.href='update_appliance.html'">Update Appliance</button>
-        <button onclick="window.location.href='update_chef.html'">Update Chef</button>
-        <button onclick="window.location.href='update_dish.html'">Update Dish</button>
-        <button onclick="window.location.href='update_ingredient.html'">Update Ingredient</button>
+        <button onclick="window.location.href='add_supplier.html'">Add Supplier</button>
+    </div>
+    <div style="display: flex; justify-content: space-evenly; flex-wrap: wrap; max-width: 60vw; gap: 1rem;">
+        <button class="update" onclick="window.location.href='update_appliance.html'">Update Appliance</button>
+        <button class="update" onclick="window.location.href='update_chef.html'">Update Chef</button>
+        <button class="update" onclick="window.location.href='update_dish.html'">Update Dish</button>
+        <button class="update" onclick="window.location.href='update_ingredient.html'">Update Ingredient</button>
+        <button class="update" onclick="window.location.href='update_supplier.html'">Update Supplier</button>
+    </div>
+    <div style="display: flex; justify-content: space-evenly; flex-wrap: wrap; max-width: 60vw; gap: 1rem;">
+
+        <button class="delete" onclick="window.location.href='delete_appliance.html'">Delete Appliance</button>
+        <button class="delete" onclick="window.location.href='delete_chef.html'">Delete Chef</button>
+        <button class="delete" onclick="window.location.href='delete_dish.html'">Delete Dish</button>
+        <button class="delete" onclick="window.location.href='delete_ingredient.html'">Delete Ingredient</button>
+        <button class="delete" onclick="window.location.href='delete_supplier.html'">Delete Supplier</button>
+    </div>
+    <div style="display: flex; justify-content: space-evenly; flex-wrap: wrap; max-width: 60vw; gap: 1rem;">
         <button onclick="window.location.href='view_appliances.php'">View Appliances</button>
         <button onclick="window.location.href='view_chefs.php'">View Chefs</button>
         <button onclick="window.location.href='view_dishes.php'">View Dishes</button>
