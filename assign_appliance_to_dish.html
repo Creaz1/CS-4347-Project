@@ -1,28 +1,23 @@
-
-<html>
-    <!--use select and option-->
-    <form style="display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    justify-content: center;
-    align-items: center;">
-        <h1>Assign an appliance to a dish</h1>
-
-        <label for="dish_id">Dish ID</label>
-        <select id="dish_id" id="dish_id">
-            <option value="dish1">Dish 1</option>
-            <option value="dish2">Dish 2</option>
-            <option value="dish3">Dish 3</option>
-            <option value="dish4">Dish 4</option>
-        </select>
-
-        <label for="appliance_id">Appliance ID</label>
-        <select id="appliance_id" id="appliance_id">
-            <option value="appliance1">Appliance 1</option>
-            <option value="appliance2">Appliance 2</option>
-            <option value="appliance3">Appliance 3</option>
-            <option value="appliance4">Appliance 4</option>
-        </select>
-
-        <button type="submit">Assign Appliance</button>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Assign Appliance to Dish</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <!-- import index.css -->
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <h1>Assign Appliance to Dish</h1>
+    <form action="assign_appliance_to_dish.php" method="post">
+        <label for="appliance_id">Appliance ID:</label>
+        <input type="number" id="appliance_id" name="appliance_id" required><br><br>
+        
+        <label for="dish_id">Dish ID:</label>
+        <input type="number" id="dish_id" name="dish_id" required><br><br>
+        
+        <input type="submit" value="Assign Appliance">
+    </form>
+</body>
 </html>
