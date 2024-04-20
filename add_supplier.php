@@ -15,12 +15,14 @@ if ($conn->connect_error) {
 
 // Check if form is submitted for supplier addition
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $name = $_POST['name'];
+    $name = $_POST['supplier_name'];
+    $email = $_POST['supplier_email'];
+    $phone = $_POST['supplier_phone_number'];
     // Additional fields as necessary
 
     // Prepare and bind
-    $stmt = $conn->prepare("INSERT INTO supplier (name) VALUES (?)");
-    $stmt->bind_param("s", $name);
+    $stmt = $conn->prepare("INSERT INTO supplier (name, email, phone) VALUES (?, ?, ?)");
+    $stmt->bind_param("sss", $name, $email, $phone);
 
     // Execute
     if ($stmt->execute()) {
