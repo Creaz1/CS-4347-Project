@@ -28,11 +28,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $appliance_name = $_POST['appliance_name'];
     $appliance_status = $_POST['appliance_status'];
 
+    // Check if data is retrieved from the form
+    if (empty($appliance_name) || empty($appliance_status)) {
+        die("Error: Appliance name or status is empty.");
+    }
+
     // Prepare SQL statement
     $sql = "INSERT INTO appliance (id, name, status) VALUES (?, ?, ?)";
 
     // Prepare and bind parameters
     $stmt = $conn->prepare($sql);
+    if (!$stmt) {
+        die("Error: " . $conn->error);
+    }
     $stmt->bind_param("iss", $appliance_id, $appliance_name, $appliance_status);
 
     // Execute the statement
