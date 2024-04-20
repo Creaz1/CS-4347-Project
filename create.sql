@@ -1,12 +1,12 @@
 CREATE TABLE supplier (
-    id INT PRIMARY KEY,
+    id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(255),
     email VARCHAR(255),
     phoneNumber CHAR(12)
 );
 
 CREATE TABLE ingredient (
-    id INT PRIMARY KEY,
+    id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(255),
     type VARCHAR(255),
     quantity INT,
@@ -16,7 +16,7 @@ CREATE TABLE ingredient (
 );
 
 CREATE TABLE dish (
-    id INT PRIMARY KEY,
+    id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(255),
     category VARCHAR(50),
     price FLOAT,
@@ -24,14 +24,14 @@ CREATE TABLE dish (
 );
 
 CREATE TABLE chef (
-    id INT PRIMARY KEY,
+    id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(255),
     email VARCHAR(255),
     phoneNumber CHAR(12)
 );
 
 CREATE TABLE appliance (
-    id INT PRIMARY KEY,
+    id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(255),
     status VARCHAR(50)
 );
