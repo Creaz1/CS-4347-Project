@@ -1,7 +1,37 @@
 <html>
-    <body>
-        <h1>Something</h1>
-        <a href="add_appliance.html">Add Appliance</a>
+
+<head>
+    <title>Restaurant Database</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+</head>
+<style>
+    h1 {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 500;
+    }
+
+    button {
+        padding: 1rem 2rem;
+        font-size: 1rem;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #0056b3;
+    }
+</style>
+
+<body style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
+    <h1>Restaurant Database</h1>
+    <!-- <a href="add_appliance.html">Add Appliance</a>
         <a href="add_chef.html">Add Chef</a>
         <a href="add_dish.html">Add Dish</a>
         <a href="add_ingredient.html">Add Ingredient</a>
@@ -20,6 +50,29 @@
         <a href="view_chef.html">View Chef</a>
         <a href="view_dish.html">View Dish</a>
         <a href="view_ingredient.html">View Ingredient</a>
-        <a href="view_recipe.html">View Recipe</a>
-    </body>
+        <a href="view_recipe.html">View Recipe</a> -->
+    <div style="display: flex; justify-content: space-evenly; flex-wrap: wrap; max-width: 80vw; gap: 1rem;">
+        <button onclick="window.location.href='add_appliance.html'">Add Appliance</button>
+        <button onclick="window.location.href='add_chef.html'">Add Chef</button>
+        <button onclick="window.location.href='add_dish.html'">Add Dish</button>
+        <button onclick="window.location.href='add_ingredient.html'">Add Ingredient</button>
+        <button onclick="window.location.href='add_recipe.html'">Add Recipe</button>
+        <button onclick="window.location.href='delete_appliance.html'">Delete Appliance</button>
+        <button onclick="window.location.href='delete_chef.html'">Delete Chef</button>
+        <button onclick="window.location.href='delete_dish.html'">Delete Dish</button>
+        <button onclick="window.location.href='delete_ingredient.html'">Delete Ingredient</button>
+        <button onclick="window.location.href='delete_recipe.html'">Delete Recipe</button>
+        <button onclick="window.location.href='edit_appliance.html'">Edit Appliance</button>
+        <button onclick="window.location.href='edit_chef.html'">Edit Chef</button>
+        <button onclick="window.location.href='edit_dish.html'">Edit Dish</button>
+        <button onclick="window.location.href='edit_ingredient.html'">Edit Ingredient</button>
+        <button onclick="window.location.href='edit_recipe.html'">Edit Recipe</button>
+        <button onclick="window.location.href='view_appliance.html'">View Appliance</button>
+        <button onclick="window.location.href='view_chef.html'">View Chef</button>
+        <button onclick="window.location.href='view_dish.html'">View Dish</button>
+        <button onclick="window.location.href='view_ingredient.html'">View Ingredient</button>
+        <button onclick="window.location.href='view_recipe.html'">View Recipe</button>
+    </div>
+</body>
+
 </html>
