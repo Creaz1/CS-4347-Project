@@ -15,7 +15,7 @@ if ($conn->connect_error) {
 
 // Check if form is submitted for supplier deletion
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $id = $_POST['id'];
+    $id = $_POST['supplier_id'];
 
     // Prepare and bind
     $stmt = $conn->prepare("DELETE FROM supplier WHERE id=?");

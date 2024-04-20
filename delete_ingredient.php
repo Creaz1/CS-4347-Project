@@ -15,7 +15,7 @@ if ($conn->connect_error) {
 
 // Check if form is submitted for ingredient deletion
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $id = $_POST['id'];
+    $id = $_POST['ingredient_id'];
 
     // Prepare and bind
     $stmt = $conn->prepare("DELETE FROM ingredient WHERE id=?");
