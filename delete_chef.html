@@ -1,0 +1,29 @@
+<html>
+
+<head>
+    <title>Delete Chef</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <!-- import index.css -->
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<form style="display: flex;
+    flex-direction: column;
+    gap: 1rem; 
+    justify-content: center;
+    align-items: center;" action="delete_chef.php" method="post">
+    <h1>Delete a chef</h1>
+
+    <div>
+        <label for="chef_id">Chef ID</label>
+        <input type="text" id="chef_id" placeholder="Chef ID" name="chef_id">
+    </div>
+
+    <button type="submit">Delete Chef</button>
+</form>
+
+</html>

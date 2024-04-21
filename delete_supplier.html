@@ -1,0 +1,31 @@
+<html>
+
+<head>
+    <title>Delete Supplier</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <!-- import index.css -->
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<form style="display: flex;
+flex-direction: column;
+gap: 1rem; 
+justify-content: center;
+align-items: center;"
+action="delete_supplier.php"
+method="post">
+    <h1>Delete a supplier</h1>
+
+    <div>
+        <label for="supplier_id">Supplier ID</label>
+        <input type="text" id="supplier_id" placeholder="supplier ID" name="supplier_id">
+    </div>
+
+    <button type="submit">Delete Supplier</button>
+</form>
+
+</html>

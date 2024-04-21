@@ -1,0 +1,51 @@
+<html>
+
+<head>
+    <title>Add Ingredient</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <!-- import index.css -->
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<form style="display: flex;
+flex-direction: column;
+gap: 1rem; 
+justify-content: center;
+align-items: start;"
+action="add_ingredient.php"
+method="post">
+    <h1>Add an ingredient</h1>
+
+    <div style="display: flex;flex-direction: row;gap: 1rem; justify-content: start;align-items: center;">
+        <label for="ingredient_name">Ingredient Name</label>
+        <input type="text" id="ingredient_name" placeholder="Ingredient Name" name="ingredient_name">
+    </div>
+
+    <div style="display: flex;flex-direction: row;gap: 1rem;justify-content: start;align-items: center;">
+        <label for="ingredient_type">Ingredient Type</label>
+        <input type="text" id="ingredient_type" placeholder="Ingredient Type" name="ingredient_type">
+    </div>
+
+    <div style="display: flex;flex-direction: row;gap: 1rem; justify-content: start;align-items: center;">
+        <label for="ingredient_quantity">Quantity on hand</label>
+        <input type="text" id="ingredient_quantity" placeholder="10" name="ingredient_quantity">
+    </div>
+
+    <div style="display: flex;flex-direction: row;gap: 1rem; justify-content: start;align-items: center;">
+        <label for="ingredient_unit_of_measurement">Unit of measurement</label>
+        <input type="text" id="ingredient_unit_of_measurement" placeholder="grams" name="ingredient_unit_of_measurement">
+    </div>
+
+    <div style="display: flex;flex-direction: row;gap: 1rem;justify-content: start;align-items: center;">
+        <label for="ingredient_supplier_id">Supplier ID</label>
+        <input type="text" id="ingredient_supplier_id" placeholder="200" name="ingredient_supplier_id">
+    </div>
+
+    <button type="submit">Add Ingredient</button>
+</form>
+
+</html>

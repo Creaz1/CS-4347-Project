@@ -1,0 +1,68 @@
+<html>
+
+<head>
+    <title>Add Dish</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <!-- import index.css -->
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<form style="display: flex;
+flex-direction: column;
+gap: 1rem; 
+justify-content: center;
+align-items: start;"
+action="add_dish.php"
+method="post">
+    <h1>Add a new dish</h1>
+
+    <div style="display: flex;
+    flex-direction: row;gap: 1rem; 
+justify-content: start;
+align-items: center;">
+        <label for="dish_name">Dish Name</label>
+        <input type="text" id="dish_name" placeholder="Dish Name" name="dish_name">
+    </div>
+
+    <div style="display: flex;
+    flex-direction: row;gap: 1rem; 
+justify-content: start;
+align-items: center;">
+        <label for="dish_category">Dish Category</label>
+        <input type="text" id="dish_category" placeholder="Dish Category" name="dish_category">
+    </div>
+
+    <div style="display: flex;
+    flex-direction: row;gap: 1rem; 
+justify-content: start;
+align-items: center;">
+        <label for="dish_price">Dish Price</label>
+        <input type="range" id="dish_price" max="50" step="0.01" min="0" placeholder="Dish Price" name="dish_price">
+        <p style="width: min-content;" id="dish_price_value">0</p>
+    </div>
+
+    <div style="display: flex;
+    flex-direction: row;gap: 1rem; 
+justify-content: start;
+align-items: center;">
+        <label for="dish_cooking_time">Dish Cooking Time</label>
+        <input type="text" id="dish_cooking_time" placeholder="10" name="dish_cooking_time">
+        <p>minutes</p>
+    </div>
+
+    <button type="submit">Add Dish</button>
+</form>
+
+<script>
+    document.getElementById('dish_price').addEventListener('input', function () {
+        document.getElementById('dish_price_value').innerText = "$" + this.value;
+    });
+    document.getElementById('dish_price').value = 10.00;
+    document.getElementById('dish_price_value').innerText = "$" + document.getElementById('dish_price').value;
+</script>
+
+</html>
