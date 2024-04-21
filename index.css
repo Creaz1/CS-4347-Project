@@ -23,14 +23,14 @@ button:hover {
 	background-color: #0056b3;
 }
 
-/* .delete {
-    background-color: #f55f6e;
+.error {
+	background-color: #f55f6e;
 }
 
-.delete:hover {
-    background-color: #dd394a;
+.error:hover {
+	background-color: #dd394a;
 }
-
+/*
 .update {
     background-color: #fcca34;
 }
@@ -48,7 +48,7 @@ input {
 
 label {
 	font-family: "Roboto", sans-serif;
-    margin-right: 0.5rem;
+	margin-right: 0.5rem;
 }
 
 table {
