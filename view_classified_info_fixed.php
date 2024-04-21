@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>View Chefs</title>
+        <title>Login</title>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link
@@ -16,14 +16,14 @@
     gap: 1rem; 
     justify-content: center;
     align-items: start;"
-    action="inject_results.php"
+    action="view_classified_info_results_fixed.php"
     method="post">
-            <h1>Add a new dish</h1>
+            <h1>Login</h1>
     
-            <label for="username">Dish Name</label>
+            <label for="username">Username</label>
             <input type="text" id="username" name="username" placeholder="Username">
-            <label for="password">Dish Price</label>
-            <input type="password" name="password" id="password" placeholder="Password">
+            <label for="password">Password</label>
+            <input type="text" name="password" id="password" placeholder="Password">
             <button type="submit">Login</button>
         </form>
     </body>
