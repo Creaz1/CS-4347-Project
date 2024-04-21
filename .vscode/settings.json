@@ -9,21 +9,8 @@
             "server": "localhost",
             "port": 3306,
             "driver": "MySQL",
-            "name": "Test",
-            "database": "Test",
-            "username": "root"
-        },
-        {
-            "mysqlOptions": {
-                "authProtocol": "default",
-                "enableSsl": "Disabled"
-            },
-            "previewLimit": 50,
-            "server": "localhost",
-            "port": 3306,
-            "driver": "MySQL",
-            "name": "Test",
-            "database": "test",
+            "name": "restaurant",
+            "database": "restaurant",
             "username": "root"
         }
     ]
