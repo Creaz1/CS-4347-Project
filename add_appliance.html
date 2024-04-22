@@ -27,7 +27,10 @@ align-items: center;" action="add_appliance.php" method="post">
 
     <div>
         <label for="appliance_status">Appliance Status</label>
-        <input type="text" id="appliance_status" name="appliance_status" placeholder="Functional/Non-Functional" required>
+        <select id="appliance_status" name="appliance_status" required>
+            <option value="Functional">Functional</option>
+            <option value="Non-Functional">Non-Functional</option>
+        </select><br><br>
     </div>
 
     <button type="submit">Add Appliance</button>

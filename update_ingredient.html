@@ -14,12 +14,7 @@
     <h1>Update Ingredient</h1>
     <form action="update_ingredient.php" method="post">
         <label for="ingredient">Select Ingredient:</label>
-        <select id="ingredient" name="ingredient_id" required>
-            <!-- Options should be populated dynamically with ingredient names and IDs -->
-            <option value="1">Ingredient 1</option>
-            <option value="2">Ingredient 2</option>
-            <!-- More ingredients -->
-        </select><br><br>
+        <input type="text" id="ingredient" name="ingredient_id" required><br><br>
         
         <label for="name">New Name:</label>
         <input type="text" id="name" name="name"><br><br>
