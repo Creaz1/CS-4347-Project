@@ -68,7 +68,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->close();
 
     // Prepare and bind
-    $stmt = $conn->prepare("UPDATE ingredient SET name=?, type=?, quantity=?, unit=?, supplier_id=? WHERE id=?");
+    $stmt = $conn->prepare("UPDATE ingredient SET name=?, type=?, quantity=?, unit=?, supplierID=? WHERE id=?");
     $stmt->bind_param("ssdsii", $name, $type, $quantity, $unit, $supplier_id, $id);
 
     // Execute
